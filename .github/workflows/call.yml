@@ -2,14 +2,15 @@ name: Hello World Training Workflow
 
 on:  
   push:
-    branches: test
+    branches: 
+      - test
 jobs:
   greet:
     runs-on: ubuntu-latest
     steps:
       - name: Run a multi-line script
         env:
-          MY_ENV: "Lo que sea"
+          MY_ENV: "World"
         run: |
           echo "Hello $MY_ENV"
           echo "Hello $GITHUB_ACTOR"
