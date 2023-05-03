@@ -4,6 +4,8 @@ on:
   workflow_dispatch:
   issues:
     types: [opened, edited]
+  push:
+    branches: test
 jobs:
   greet:
     runs-on: ubuntu-latest
